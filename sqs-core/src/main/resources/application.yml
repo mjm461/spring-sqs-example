@@ -1,0 +1,16 @@
+cloud:
+  aws:
+    region:
+      static: eu-west-1
+
+com:
+  sqsexample:
+    accesskey: access
+    secretkey: secret
+    queue:
+      uri: http://localhost:9324
+      name: example-sqs-queue
+      batch:
+        ms: 200
+        size: 10
+        outbound: 5

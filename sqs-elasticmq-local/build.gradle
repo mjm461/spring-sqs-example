@@ -1,0 +1,27 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
+	}
+}
+
+apply plugin: 'org.springframework.boot'
+
+ext{
+
+}
+
+dependencies {
+	compile project(':sqs-core')
+
+	compile "org.springframework.boot:spring-boot-starter-web"
+	compile "org.springframework.boot:spring-boot-starter-test"
+	compile "org.elasticmq:elasticmq-rest-sqs_2.12:${elasticMqVersion}"
+
+}
+
+springBoot {
+	mainClass = "com.example.ExampleApplication"
+}

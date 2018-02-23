@@ -1,0 +1,29 @@
+allprojects {
+	group 'com.example'
+	version '0.0.1-SNAPSHOT'
+
+	apply plugin: 'java'
+
+	sourceCompatibility = 1.8
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		testCompile group: 'junit', name: 'junit', version: '4.12'
+	}
+
+	ext {
+		springBootVersion = '1.5.9.RELEASE'
+		springFrameworkVersion = "4.3.14.RELEASE"
+		springCloudAwsVersion = '1.2.2.RELEASE'
+		elasticMqVersion = '0.13.8'
+		lombokVersion = "1.16.16"
+	}
+
+	jar {
+		onlyIf { !sourceSets.main.allSource.files.isEmpty() }
+	}
+
+}

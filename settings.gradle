@@ -1,0 +1,4 @@
+rootProject.name = 'sqsexample'
+include 'sqs-core'
+include 'sqs-elasticmq-local'
+

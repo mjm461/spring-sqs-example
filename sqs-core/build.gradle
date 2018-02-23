@@ -1,0 +1,22 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+
+	}
+}
+
+ext{
+
+}
+
+dependencies {
+
+	compile "org.springframework.cloud:spring-cloud-aws-context:${springCloudAwsVersion}"
+	compile "org.springframework.cloud:spring-cloud-aws-messaging:${springCloudAwsVersion}"
+	compile "org.springframework.cloud:spring-cloud-aws-autoconfigure:${springCloudAwsVersion}"
+
+	testCompile "org.elasticmq:elasticmq-rest-sqs_2.12:${elasticMqVersion}"
+
+}
